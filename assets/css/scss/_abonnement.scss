@@ -1,15 +1,42 @@
-.card-body{
+.card-body {
     background-color: #201F25;
     color: #fe0dea;
 }
 
-.btn{
-background-color: #fe0dea;
-color: white;
+
+#contabo {
+    box-sizing: border-box;
+    height: 711px;
+    background-color: #201F25;
 }
 
-#contabo{
-  
-    min-height: 85vh;
-    background-color: #201F25;
+.btnabo {
+    background-color: #fe0dea;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btnabo a {
+    background-color: #fe0dea;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width:320px) and (max-width:764px) {
+
+    #contabo {
+        box-sizing: border-box;
+        height: 1100px;
+
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1279px) {
+
+    #contabo {
+        box-sizing: border-box;
+        height: 500px;
+
+    }
 }

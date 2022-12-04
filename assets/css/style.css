@@ -52,14 +52,10 @@ table {
 
 /*CSS Contact*/
 #contcontact {
-  height: 85vh;
+  height: 100%;
   background-color: #121114;
   color: #fe0dea;
-}
-
-.btn {
-  background-color: #fe0dea;
-  color: white;
+  align-content: center;
 }
 
 footer {
@@ -67,7 +63,8 @@ footer {
   background-color: #121114;
 }
 
-#btnsub, #btnres {
+#btnsub,
+#btnres {
   background-color: #fe0dea;
   color: white;
 }
@@ -98,31 +95,6 @@ footer {
   border-bottom: 2px solid #fe0dea;
 }
 
-.categorie {
-  font-family: "Lora", serif;
-  left: 10%;
-  padding-top: 48%;
-  font: 21px;
-  box-sizing: border-box;
-  max-width: 100%;
-  color: #fe0dea;
-  font-weight: bolder;
-  position: absolute;
-}
-
-.architext {
-  padding-left: 10%;
-  top: 88%;
-  font-family: "Lora", serif;
-  font: 21px;
-  box-sizing: border-box;
-  max-width: 100%;
-  color: #fe0dea;
-  font-weight: bolder;
-  position: absolute;
-  z-index: 50;
-}
-
 /* --- IMG conteneur photo propriété dimension */
 #imgcol1 {
   padding-bottom: 15px;
@@ -149,29 +121,52 @@ footer {
   color: #fe0dea;
 }
 
-.btn {
-  background-color: #fe0dea;
-  color: white;
-}
-
 #contabo {
-  min-height: 85vh;
+  box-sizing: border-box;
+  height: 711px;
   background-color: #201F25;
 }
 
+.btnabo {
+  background-color: #fe0dea;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btnabo a {
+  background-color: #fe0dea;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 764px) {
+  #contabo {
+    box-sizing: border-box;
+    height: 1100px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  #contabo {
+    box-sizing: border-box;
+    height: 500px;
+  }
+}
 /*NAV BAR*/
 body {
   background-color: #201F25;
 }
 
 .navbar {
-  height: 70px;
   background-color: #121114;
+}
+
+.navbar-toggler-icon {
+  background-color: #fe0dea;
+  border-radius: 2px;
 }
 
 .logo_navbar {
   padding-left: 10px;
-  height: 90%;
 }
 
 #linkAct {
@@ -180,7 +175,10 @@ body {
   padding-right: 20px;
 }
 
-#link1, #link2, #link3, #link4 {
+#link1,
+#link2,
+#link3,
+#link4 {
   color: #8f0aaa;
   font-weight: lighter;
   padding-right: 20px;
@@ -212,148 +210,32 @@ body {
 }
 
 .icone_reseau {
+  float: right;
   display: inline;
-  padding-right: 10px;
+  padding: 8px 10px 8px 0px;
 }
 
-/* CAROUSEL / SLIDE ADAPTATION CODE */
-#cont-carousel {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-bottom: 2px solid #fe0dea;
-  background-color: #201F25;
-  height: auto;
-}
-
-.captiongd {
-  color: #fe0dea;
-  text-align: left;
-  font-size: 24px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 55px;
-  width: 55px;
-  background-size: 100%, 100%;
-  border-radius: 50%;
+.btna {
   background-color: #fe0dea;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.carousel-control-prev-icon {
-  margin-left: -50px;
-}
-
-.carousel-control-next-icon {
-  margin-right: -50px;
-}
-
-/*XL*/
-@media (min-width: 992px) {
-  /* Show 4th slide on lg if col-lg-4*/
-  .carousel-inner .active.col-lg-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: absolute;
-    top: 0;
-    right: -33.3333%;
-    /*change this with javascript in the future*/
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  /* Show 3rd slide on md if col-md-6*/
-  .carousel-inner .active.col-md-6.carousel-item + .carousel-item + .carousel-item {
-    position: absolute;
-    top: 0;
-    right: -50%;
-    /*change this with javascript in the future*/
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-}
-/* MD */
-@media (min-width: 768px) {
-  .carousel-item {
-    margin-right: 0;
-  }
-  /* show 2 items */
-  .carousel-inner .active + .carousel-item {
-    display: block;
-  }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
-    transition: none;
-  }
-  .carousel-inner .carousel-item-next {
-    position: relative;
-    transform: translate3d(0, 0, 0);
-  }
-  /* left or forward direction */
-  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-.carousel-item-next.carousel-item-left + .carousel-item,
-.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
-    position: relative;
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-  /* farthest right hidden item must be also positioned for animations */
-  .carousel-inner .carousel-item-prev.carousel-item-right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-  /* right or prev direction */
-  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-.carousel-item-prev.carousel-item-right + .carousel-item,
-.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
-    position: relative;
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    display: block;
-    visibility: visible;
-  }
-}
-/* LG */
-@media (min-width: 992px) {
-  /* show 3rd of 3 item slide */
-  .carousel-inner .active + .carousel-item + .carousel-item {
-    display: block;
-  }
-  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-    transition: none;
-  }
-  .carousel-inner .carousel-item-next {
-    position: relative;
-    transform: translate3d(0, 0, 0);
-  }
-  /* left or forward direction */
-  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-  /* right or prev direction */
-  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    display: block;
-    visibility: visible;
-  }
-}
 /*Contenaire Article*/
 .img {
   height: 100%;
   width: 100%;
 }
 
-#contart1, #contart2, #contart3, #contart4,
-#contart5, #contart6, #contart7, #contart8, #contart9 {
+#contart1,
+#contart2,
+#contart3,
+#contart4,
+#contart5,
+#contart6,
+#contart7,
+#contart8,
+#contart9 {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #201F25;
@@ -385,12 +267,10 @@ article h2 {
 
 /* Footer*/
 footer {
-  height: 65.8px;
   padding: 15px 0px;
   text-transform: uppercase;
   font-size: 13px;
   font-family: "Lora", serif;
-  display: inline-flex;
   color: #d2c3be;
   background-color: #121114;
   text-decoration: none;
