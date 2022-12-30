@@ -69,6 +69,11 @@ footer {
   color: white;
 }
 
+.comments {
+  color: red;
+  font-size: 12px;
+}
+
 /*CSS ABOUTUS*/
 #contAboutUs {
   padding-top: 60px;
