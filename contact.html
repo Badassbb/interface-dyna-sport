@@ -109,38 +109,42 @@
 
         <div class="row">
             <div class="col-3"></div>
-            <form class="col-6 justify-content-center" action="/action_page.php">
+            <form class="col-6 justify-content-center" action="" id="contact">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="pwd" placeholder="Votre nom" name="name">
+                    <input type="text" class="form-control" id="name" placeholder="Votre nom" name="name" value="">
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    <input type="email" class="form-control" id="email" placeholder="Enter une adresse email"
+                        name="email" value="">
                 </div>
                 <div class="mb-3">
                     <label for="adress" class="form-label">Votre adresse</label>
-                    <input type="text" class="form-control" id="adress" placeholder="votre adresse" name="name">
+                    <input type="text" class="form-control" id="adress" placeholder="votre adresse" name="name"
+                        value="">
                 </div>
                 <div class="mb-3">
                     <label for="tel" class="form-label">Numéro de téléphone</label>
-                    <input type="text" class="form-control" id="adress" placeholder="Votre numéro de téléphone"
-                        name="name">
+                    <input type="text" class="form-control" id="tel" placeholder="Votre numéro de téléphone" name="name"
+                        value="">
                 </div>
                 <div class="mb-3">
                     <label for="comment">Commentaire</label>
-                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                    <textarea class="form-control" rows="5" id="comment" name="text" value=""></textarea>
                 </div>
                 <div class="form-check mb-3">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                        <input class="form-check-input" type="checkbox" name="remember" value=""> Remember me
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary">envoyer</button>
+                <button type="submit" value="envoyer" class="btn btn-primary" id="submit">envoyer</button>
                 <button type="reset" class="btn btn-primary">reset</button>
 
+
             </form>
+            <p id="erreur"></p>
             <div class="col-3"></div>
         </div>
 

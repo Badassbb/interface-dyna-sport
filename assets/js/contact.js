@@ -1,66 +1,36 @@
-function contact()                                    
-{ 
-    var name = document.forms["RegForm"]["Nom"];               
-    var email = document.forms["RegForm"]["Email"];    
-    var phone = document.forms["RegForm"]["Téléphone"];  
-    var what =  document.forms["RegForm"]["Sujet"];  
-    var password = document.forms["RegForm"]["Mot de passe"];  
-    var address = document.forms["RegForm"]["Adresse"];  
-    var comment = document.forms["RegForm"]["Commentaire"];  
+document.getElementById("contact").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let erreur;
+    let nom = document.getElementById("name");
+    let email = document.getElementById("email");
+    let adress = document.getElementById("adress");
+    let tel = document.getElementById("tel");
+    let message = document.getElementById("comment");
 
-    if (name.value == "")                                  
-    { 
-        alert("Mettez votre nom."); 
-        name.focus(); 
-        return false; 
-    }    
-    if (address.value == "")                               
-    { 
-        alert("Mettez votre adresse."); 
-        address.focus(); 
-        return false; 
-    }        
-    if (email.value == "")                                   
-    { 
-        alert("Mettez une adresse email valide."); 
-        email.focus(); 
-        return false; 
-    }    
-    if (email.value.indexOf("@", 0) < 0)                 
-    { 
-        alert("Mettez une adresse email valide."); 
-        email.focus(); 
-        return false; 
-    }    
-    if (email.value.indexOf(".", 0) < 0)                 
-    { 
-        alert("Mettez une adresse email valide."); 
-        email.focus(); 
-        return false; 
-    }    
-    if (phone.value == "")                           
-    { 
-        alert("Mettez votre numéro de téléphone."); 
-        phone.focus(); 
-        return false; 
-    }    
-    if (password.value == "")                        
-    { 
-        alert("Saisissez votre mot de passe"); 
-        password.focus(); 
-        return false; 
-    }    
-    if (what.selectedIndex < 1)                  
-    { 
-        alert("Mettez votre cours."); 
-        what.focus(); 
-        return false; 
+    if (!nom.value) {
+        erreur = "Veuillez renseigner un nom"
+    }
+    if (!email.value) {
+        erreur = "Veuillez renseigner un email"
     } 
-    if (comment.value == "")                  
-    { 
-        alert("Écrivez un commentaire."); 
-        comment.focus(); 
-        return false; 
+    if (!adress.value) {
+        erreur = "Veuillez renseigner une adresse"
     } 
-    return true; 
-}
+    if (!tel.value) {
+        erreur = "Veuillez renseigner un numéro de téléphone"
+    } 
+    if (!message.value) {
+        erreur = "Veuillez renseigner votre message ou question"
+    }
+    if (!message.value) {
+        erreur = "Vous n'avez pas renseigné le champ message..."
+    }
+    if (erreur) {
+        e.preventDefault();
+        document.getElementById("erreur").innerHTML = erreur;
+        return false;
+    } else {
+        alert('Formulaire envoyé !')
+    } 
+    alert('Formulaire envoyé !')
+  });
